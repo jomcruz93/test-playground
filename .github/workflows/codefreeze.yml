@@ -1,0 +1,22 @@
+name: Code Freeze
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+      - unlabeled
+  schedule:
+    - cron: "*/30 * * * *" # Every 30 minutes
+
+jobs:
+  block:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: yykamei/block-merge-based-on-time@v2.1.55
+        with:
+          timezone: Asia/Singapore
+          after: "14:00 on Tuesday"
+          before: "11:00 on Wednesday"
+          base-branches: "uat"
