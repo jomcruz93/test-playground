@@ -8,7 +8,7 @@ on:
       - labeled
       - unlabeled
   schedule:
-    - cron: "*/5 * * * *" # Every 30 minutes
+    - cron: ${{ vars.CODEFREEZE_CRON }}
 
 jobs:
   block:
@@ -17,6 +17,6 @@ jobs:
       - uses: yykamei/block-merge-based-on-time@v2.1.55
         with:
           timezone: Asia/Singapore
-          after: "17:10 on Thursday"
-          before: "19:00 on Thursday"
-          base-branches: "uat"
+          after: ${{ vars.CODEFREEZE_AFTER }}
+          before: ${{ vars.CODEFREEZE_BEFORE }}
+          base-branches: ${{ vars.CODEFREEZE_BASE_BRANCHES }}
