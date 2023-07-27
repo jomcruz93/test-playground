@@ -8,7 +8,7 @@ on:
       - labeled
       - unlabeled
   schedule:
-    - cron: ${{ vars.CODEFREEZE_CRON }}
+    - cron: "*/5 * * * *"
 
 jobs:
   block:
