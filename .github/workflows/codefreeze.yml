@@ -17,6 +17,6 @@ jobs:
       - uses: yykamei/block-merge-based-on-time@v2.1.55
         with:
           timezone: Asia/Singapore
-          after: "16:15 on Thursday"
-          before: "16:20 on Thursday"
+          after: "16:07 on Thursday"
+          before: "16:12 on Thursday"
           base-branches: "uat"
