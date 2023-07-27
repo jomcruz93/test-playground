@@ -18,5 +18,5 @@ jobs:
         with:
           timezone: Asia/Singapore
           after: "17:10 on Thursday"
-          before: "17:15 on Thursday"
+          before: "19:00 on Thursday"
           base-branches: "uat"
