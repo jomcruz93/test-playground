@@ -7,8 +7,6 @@ on:
       - synchronize
       - labeled
       - unlabeled
-  schedule:
-    - cron: "*/30 * * * *"
 
 jobs:
   block:
